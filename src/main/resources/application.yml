@@ -6,7 +6,6 @@ logging:
    level:
       org.springframework.security: TRACE
       org.springframework.cloud.gateway: TRACE
-      com.manazeu.gateway: DEBUG
 spring:
    profiles:
       active: dev
@@ -18,10 +17,3 @@ spring:
 rsa:
    key:
       secret: WVZgXCnLoulqw1G97eFHV32P28x3uYbw9jcwTwuiM+ZI75od4y2Ln7bviuuxedZBKXF4VJe/Vp4VvT8/R6XEBQ== # used to authenticate JWT token
-service-spec:
-   service:
-      docker-service:
-         id: 6834309c9715fd2fa1e0a44f
-         uri: http://127.0.0.1:9090
-      farmology-service:
-         uri: http://127.0.0.1:5090
