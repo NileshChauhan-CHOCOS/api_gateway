@@ -12,7 +12,7 @@ spring:
    application.name: APIGateway
    data:
       mongodb:
-         uri: mongodb://localhost:27017/?readPreference=primary&directConnection=true&ssl=false #==> Update as per requirement
+         uri:  #==> Update as per requirement
          database: db_route # update database name
 rsa:
    key:
