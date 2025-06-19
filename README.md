@@ -14,7 +14,6 @@ This service acts as a single entry point for routing requests to downstream mic
 - [Custom Predicates & Filters](#custom-predicates--filters)
 - [Running Locally](#running-locally)
 - [Build & Run with Docker](#build--run-with-docker)
-- [License](#license)
 
 ---
 
@@ -116,6 +115,23 @@ db.routes.insertOne(
 ```bash
 ./mvnw spring-boot:run
 ```
+
+## ⚠️ **Important:**  
+At application startup, a **JWT token** will be printed in the application logs.  
+You can use this token to test the secured API endpoints via tools like **Postman**, **curl**, or your frontend/mobile app.
+
+📝 **Log Output:**
+![JWT Token Log Output](./docs/JWT_token.jpg)
+
+## 📥 Sample cURL Command (with JWT)
+#### Once your application is running and you’ve retrieved the JWT token from the logs, you can test a secured route using the following cURL command:
+```bash
+curl --location 'http://127.0.0.1:9091/nova/ejakerarkanva/' \
+--header 'Cookie: x_cookie=test endpoint; path=/' \
+--header 'Authorization: Bearer eyJUZXN0IjoiVEVTVCIsImFsZyI6IkhTMjU2In0.eyJzdWIiOiJNZWxvZGlASU5JVFkiLCJqdGkiOiJhMjc4YzdkOC1lNTg2LTQwZjMtYmFjNC00ZjNkODIwYTAxOTEiLCJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tIiwiaWF0IjoxNzUwMzMyODEyLCJleHAiOjE3NTAzMzY0MTJ9.Sa7xD3fWI-95ZR7L5_WdYLQk9NpkUqh3bwX9QFqrZ2w' \
+--data ''
+```
+
 ## ⚠️ **Important:**  
 Ensure another REST application is running on port `8081` with the endpoint `/api/public` to properly test the routing functionality
 
