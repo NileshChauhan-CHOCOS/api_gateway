@@ -46,8 +46,8 @@ This service acts as a single entry point for routing requests to downstream mic
 
 ### 📦 Clone the repository
 ```bash
-git clone https://github.com/your-org/your-spring-cloud-gateway.git
-cd your-spring-cloud-gateway
+git clone https://github.com/NileshChauhan-CHOCOS/api_gateway.git
+cd api_gateway
 ```
 
 ## ⚙️ Application Configuration
